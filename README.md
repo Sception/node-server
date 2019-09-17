@@ -1,6 +1,31 @@
 # node-server
 > 基于Node+Express+Mysql的博客网站的后台(这里主要是后端实现),线上地址:http://www.zoujiesss.com
 
+## Technology
+- node
+- body-parser: "^1.19.0",
+- cookie-parser: "^1.4.4",
+- express: "^4.17.1",
+- jsonwebtoken: "^8.5.1",
+- moment: "^2.24.0",
+- morgan: "^1.9.1",
+- mysql: "^2.17.1",
+- qiniu: "^7.2.2",
+- svg-captcha: "^1.4.0"
+
+## Directory
+![directory](https://github.com/Sception/Sception.io/blob/master/images/directory.jpg)
+
+## tips
+请注意clone下来的代码需修改其中的某些配置项方能使用
+### DatabaseConfig
+![DatabaseConfig](https://github.com/Sception/Sception.io/blob/master/images/database_config.jpg)
+在config文件夹下的database.config.js文件中,导入自己的数据库配置信息(主机地址,数据库名称,用户名,密码等)
+### QiNiuConfig
+![QiNiuConfig](https://github.com/Sception/Sception.io/blob/master/images/qiniuConfig.png)
+在config文件夹下的qiniuConf.js文件中,将自己的七牛管理后台中的key填入其中即可(key所在位置如下图所示)
+![QiNiuKey](https://github.com/Sception/Sception.io/blob/master/images/qiNiuKey.png)
+
 ## Build Setup
 
 ```bash
@@ -20,18 +45,6 @@ supervisor index.js
 ```
 
 浏览器访问 [http://localhost:3000](http://localhost:3000)
-
-## Technology
-- node
-- body-parser: "^1.19.0",
-- cookie-parser: "^1.4.4",
-- express: "^4.17.1",
-- jsonwebtoken: "^8.5.1",
-- moment: "^2.24.0",
-- morgan: "^1.9.1",
-- mysql: "^2.17.1",
-- qiniu: "^7.2.2",
-- svg-captcha: "^1.4.0"
 
 ## Completed（only server）
 - [x] 登录
