@@ -27,7 +27,7 @@ app.use('*',(req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "*");
     res.header("Access-Control-Allow-Methods","GET, POST, PUT, DELETE, OPTIONS");
-    // res.header("Content-Type","text/html; charset=utf-8");
+    res.header("Content-Type","text/html; charset=utf-8");
     let { baseUrl:url } = req;
     //验证接口是否需要token
     let tokenFlag = noToken.every(item => url.indexOf(item) === -1);

@@ -12,7 +12,7 @@ exports.login = (req,res) => {
     let result = null;
     if(results.length > 0){
       let pwd = results[0].password;
-      let token = createToken({data:username});
+      let token = createToken();
       if(password === pwd){
         result = {
           code:statusCode.ERROR_OK,
@@ -36,6 +36,15 @@ exports.login = (req,res) => {
     }
     return res.end(JSON.stringify(result));
   })
+}
+
+/*
+* 验证token是否正确
+* */
+exports.tokenVerify = (data) => {
+    db.query(sql,[data],(error,results,fields) => {
+
+    })
 }
 
 /*
