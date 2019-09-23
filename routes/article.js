@@ -266,10 +266,12 @@ function getDataWithPages(req,res,db,tableName,isPage = true){
     }else if(publishTime){
       sql += `publishTime = ${publishTime}`;
     }
-    if(parseInt(article_type,10) !== 2){
-        sql += ` where id = ${id}`;
+    // 关于我文章的相关字段做特殊处理
+    if(parseInt(article_type,10) === 2){
+      sql += ` where article_type = ${article_type}`;
+    }else{
+      sql += ` where id = ${id}`;
     }
-
     return sql;
   }
 }
