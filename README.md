@@ -19,8 +19,11 @@
 ## tips
 请注意clone下来的代码需修改其中的某些配置项方能使用
 ### DatabaseConfig
+config文件夹下的database.config.js文件中,导入自己的数据库配置信息(主机地址,数据库名称,用户名,密码等)
 ![DatabaseConfig](https://github.com/Sception/Sception.io/blob/master/images/database_config.jpg)
-在config文件夹下的database.config.js文件中,导入自己的数据库配置信息(主机地址,数据库名称,用户名,密码等)
+
+将my_db.sql文件导入数据库中生成相应的表(以navicat为例)
+![generalTable](https://github.com/Sception/Sception.io/blob/master/images/generalTable.jpg)
 ### QiNiuConfig
 ![QiNiuConfig](https://github.com/Sception/Sception.io/blob/master/images/qiniuConfig.png)
 在config文件夹下的qiniuConf.js文件中,将自己的七牛管理后台中的key填入其中即可(key所在位置如下图所示)
